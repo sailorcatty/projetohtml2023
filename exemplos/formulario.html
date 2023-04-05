@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo formulario</title>
+</head>
+<body>
+    <h1>Meu formulario</h1>
+    <form>
+        <fieldset>
+        <legend>Dados iniciais</legend>
+            <input type="text" name="nome"
+                    placeholder="Digite seu nome..."
+                    size="100">
+            <br><br>
+            <label>
+                Data de nascimento:
+                <input type="date" name="dtnasc">
+            </label>
+        </fieldset>
+        <fieldset style="background-color: plum;>
+        <legend>Mais campos</legend>
+            <label for="nsup">Nível Superior?</label>
+            <input type="checkbox" id="nsup" name="nsup">
+            <br><br>
+            <input type="submit" value="enviar"> &nbsp;&nbsp;&nbsp;
+            <input type="reset" value="limpar">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exemplo de formulario 2</title>
+</head> 
+<form>
+<body>
+    <form>
+    <h1 style="text-align:center">Exemplo de formulario 2</h1>
+    <table style="width:70%; margin: 0 auto">
+        <tr>
+            <td style="text-align:right">nome:</td>
+            <td>
+                <input type="dsada" name="nome"
+                        placeholder="nome">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">email:</td>
+            <td>
+                <input type="email" name="email"
+                        placeholder="seu e-mail">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">salario:</td>
+            <td>
+                <input type="number" name="salario"
+                        step="0.05" min="0" max="100000">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">uf telefone:</td>
+            <td>
+                <select name="uf">
+                    <option selected disabled>Selecione...</option>
+                    <option>São Paulo</option>
+                    <option>Minas Gerais</option>
+                    <option>Rôndonia</option>
+                    <option>Acre</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">telefone:</td>
+            <td>
+                <input type="tel" name="telefone"
+                        placeholder="telefone">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">hobby:</td>
+            <td>
+                <input type="radio" name="hobby" value="jogos">jogos
+                &nbsp;&nbsp;
+                <input type="radio" name="hobby" value="esportes">esportes
+                &nbsp;&nbsp;
+                <input type="radio" name="hobby" value="musica">musica
+                &nbsp;&nbsp;
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="submit" value="enviar"> &nbsp;&nbsp;&nbsp;
+            <input type="reset" value="limpar">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
