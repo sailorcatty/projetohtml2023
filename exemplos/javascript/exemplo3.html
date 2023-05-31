@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 3</title>
+</head>
+<body>
+    <h1 id="titulo">Manipulando elementos html (DOM) com Javascript</h1>
+    <p id="result"></p>
+    <fieldset>
+        <label for="num1">Valor 1:</label>
+        <input type="number" id="num1" step="0.1" min="0" onmouseover="verNum()"><br>
+        <label for="num2">Valor 2:</label>
+        <input type="number" id="num2" step="0.1" min="0"><br>
+        <input type="button" id="btVer" value="OK">
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Multiplos de 4</legend>
+        <label for="v1r1">Inicio:</label>
+        <input id="v1r1" type="number" step="1" min="0"><br>
+        <label for="v1r2">Fim:</label>
+        <input id="v1r2" type="number" step="1" min="0">
+        <span id="verif"></span><br>
+        <button id="btGerar">Gerar</button>
+    </fieldset>
+    <div id="multiplos"></div>
+    <script>
+        let titulo = document.getElementById('titulo');
+        //alert(titulo.innerHTML);
+        titulo.style = 'border: 1px dotted yellow; font-size: 30pt;';
+        titulo.style.backgroundColor = 'plum';
+        
+        let txtNum1 = document.querySelector('#num1');
+        let txtNum2 = document.querySelector('#num2');
+        let botao = document.getElementById('#btVer');
+        
+        function verNum(){
+            result.innerHTML = "Informe um valor maior que 0!"
+        };
+
+        txtNum1.onmouseout = function(){
+            result.innerHTML = "";
+        };
+
+        botao.onclick = function(){
+            if(parseFloat(txtNum1.value) > parseFloat(txtNum2.value)){
+                result.innerHTML = 'Omaior valor é o primeiro';
+            }
+            else if(parseFloat(txtNum2.value) > parseFloat(txtNum1.value)){
+                result.innerHTML = 'O maior valor é o segundo';
+            }
+            else{
+                result.innerHTML = "Informe um valor maior que 0!"
+            }
+        };
+
+        // utilizando somente id para selecionar os elementos
+
+        vlr2.onkeyup = function(){
+            if(parseInt(vlr2.value) < parseInt(vlr1.value)){
+                verif.innerHTML = "O valor deve ser maior que o valor inicial.";
+                verif.style.color = 'red';
+            }
+            else{
+                verif.innerHTML = 'OK';
+                verif.style.color = 'black';
+            }
+        };
+
+        btGerar.onclick = function(){
+            multiplos.innerHTML = '<h2>Múltiplos de 4 </h2>';
+            lista = '<ul>';
+            for(let i=parseInt(vlr1.value); i<=parseInt(vlr2.value); i++){
+                if(i % 4 === 0 ){
+                    lista += '<li>' + i + '</li>';
+                }
+            }
+            lista += '</ul>';
+            multiplos.innerHTML += lista;
+        };
+    </script>
+</body>
+</html>
