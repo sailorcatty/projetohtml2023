@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de formulário com javascript</title>
+</head>
+<body>
+    <form method="post" id="form1">
+    <input type="text" name="name" placeholder="Digite seu nome" size="50"><br><br>
+    <input type="password" id="senha" placeholder="Senha aqui...">
+    <input type="text" name="telefone" placeholder="(99)99999-9999" pattern="\(\d{2}\)\d{4}-\d{4}">
+    <br><br>
+    <label>Aperitivo? <input name="aperit" type="checkbox" id="aperit"></label>
+    <fieldset>
+    <legend>Sexo:</legend>
+    <p id = "aviso"></p>
+        <label for="masc">Masculino:</label><input type="radio" name="sexo" value="M" id="masc">
+        <label for="fem">Feminino:</label><input type="radio" name="sexo" value="F" id="fem">
+    </fieldset>
+    <button id="btSexo">Ver</button>
+    <br>
+    
+    <label>Escreva uma mensagem:<br>
+    <textarea id="mensagem" name="mensagem" rows="10" cols="80">O que estiver aqui aparece dentro do campo</textarea></label>
+    <fieldset>
+        <legend>Estado:</legend>
+        <select name="estado" id="uf">
+            <option value="" selected disabled>Selecione</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+        </select>
+    </fieldset>
+    <p id="natural"></p>
+    <br>
+        <input type="number" min="0" max=100 step="2">
+    <fieldset>
+        <input type="submit" value="Enviar" id="btenviar">
+        <input type="reset" value="Limpar">
+    </fieldset>
+    </form>
+    <script>
+        /*
+        form1.onsubmit = function(){
+            nome = document.getElementsByName('nome')[0];
+            senha = document.getElementsByName('senha')[0];
+            sexo = document.getElementsByName('sexo');
+
+            nome.style.backgroundColor = 'lightRed';
+            senha.style.backgroundColor = 'lightRed';
+
+            let ok = false;
+
+            if (nome.value.length > 5) {
+                nome.style.backgroundColor = 'white';
+                ok = true;
+            }
+            if (senha.value.length >= 8) {
+                senha.style.backgroundColor = 'white';
+                ok = true;
+            }
+            ok = verSexo(sexo);
+
+            return ok ? true : false;
+        }
+
+        function verSexo(sexo) {
+            let marcado = false
+            sexo.forEach(s => {
+                if (s.checked) {
+                    marcado = true;
+                }
+            });
+            if(marcado == false){
+                aviso.innerHTML = "Escolher uma opção";
+                aviso.style.color = 'red';
+            }else{
+                aviso.innerHTML = "";
+                aviso.style.color = 'white'
+            }
+            return marcado;
+        }
+        */
+        senha = document.getElementsByName('senha')[0];
+        senha.onchange = function(){
+            if (this.value.length < 8){
+                this.setCustomVlaidity('A senha deve ter mais de 7 caracteres');
+                this.validity = false;
+            }else{
+                this.setCustomValidity('');
+                this.validity = true;
+            }
+        };
+    </script>
+</body>
+</html>
