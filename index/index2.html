@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha página pessoal</title>
+      <style>
+        body {
+          background-color: #dadada;
+          font-family: Arial, sans-serif;
+        }
+    
+        .container {
+          max-width: 1300px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+    
+        h1 {
+          color: #6b346b;
+          text-align: center;
+        }
+    
+        p {
+          color: #d1e7d1;
+          font-size: 20px;
+        }
+    
+        .image-container {
+          overflow: hidden; /* alteração */
+          text-align: center; /* alteração */
+          display: flex;
+          height: 680px;
+          justify-content: center;
+          align-items: flex-start; /* alteração 1 */
+        }
+    
+        .image-container img {
+          display: inline-block; /* alteração */
+          margin: 20px; 
+          vertical-align: middle; /* alteração */
+        }
+
+        .text-container {
+          max-width: 1000px;
+          height: 640px;
+          margin: 20px;
+          flex-grow: 1;
+          padding-left: 20px;
+          background-color: #d49bb8;
+        }
+    
+        a {
+          color: #6b346b;
+          text-decoration: none;
+        }
+    
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 0;
+          background-color: #f5f5f5;
+        }
+    
+        .logo {
+          width: 40px;
+          margin-left: 20px;
+        }
+    
+        nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+    
+        nav ul li {
+          margin-right: 10px;
+        }
+    
+        nav ul li a {
+          padding: 5px 10px;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+        }
+    
+        nav ul li a:hover {
+          background-color: #f4c3d7;
+        }
+    
+        .section {
+          background-color: #fce6ee;
+          padding: 20px;
+          text-align: center;
+          margin-top: 20px;
+        }
+    
+        .references {
+          background-color: #d9f5e8;
+          padding: 20px;
+          text-align: center;
+          margin-top: 20px;
+        }
+    
+        .references dl {
+          list-style-type: none;
+          padding: 0;
+        }
+    
+        .references dt {
+          margin-bottom: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <img class="logo" src="https://png.pngtree.com/element_our/20190603/ourlarge/pngtree-tattoo-flying-cartoon-illustration-image_1459141.jpg" alt="Logo">
+        <nav>
+          <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+      <div class="container">
+        <div class="image-container">
+          <div>
+            <img src="https://preview.redd.it/i-made-hoshino-ai-discord-banners-from-the-mv-feel-free-to-v0-ibzpuv2pwqva1.gif?width=857&auto=webp&v=enabled&s=5b954aa6eb5895822a774e4ca204a63460ba4fac" alt="Imagem 1">
+            <img src="https://preview.redd.it/i-made-hoshino-ai-discord-banners-from-the-mv-feel-free-to-v0-baia6x1swqva1.gif?width=857&auto=webp&v=enabled&s=dda269620477b72ddcd6ec3149e78a246cb88d8b" alt="Imagem 2">
+          </div>
+          <div class="text-container">
+            <h2 style="color: #ffffff;">Página Pessoal</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae nisl ac leo semper malesuada. Proin vitae tortor vel libero maximus tincidunt. Mauris placerat sapien et tincidunt congue. Fusce fermentum faucibus congue. Morbi tempus mauris ac odio pretium posuere nec in enim. Morbi tincidunt erat tortor, vitae viverra ante pulvinar sed. Aenean malesuada commodo nisl. Aliquam placerat laoreet mi, ut pellentesque elit. Curabitur eget sodales tortor. Sed aliquam ex sit amet blandit sagittis. Donec luctus est tristique libero rhoncus, a bibendum metus sollicitudin. Phasellus at sapien ultrices, ornare sem nec, dignissim mauris. Sed ut condimentum ante. Duis consequat a sem sed facilisis. Fusce vulputate, dui eget faucibus mattis, ipsum metus elementum. Curabitur eget sodales tortor. Sed aliquam ex sit amet blandit sagittis.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" style="background-color: #91bd95;">
+        <h1 style="color: #ffffff;">Links e Referências</h1>
+        <dl style="text-align: center; color: #332583;">
+          <dt><a href="https://github.com/sailorcatty/projetohtml2023.github.io.git">Github</a></dt>
+          <br><br>
+          <dt><a href="projetos html - 1 pc pessoal.zip">Todo o projeto HTML do meu pc pessoal</a></dt>
+          <br><br>
+          <dt><a href="projetos html.zip">Todo o projeto HTML do pc da IFRO</a></dt>
+        </dl>
+      </div>
+    </body>
+</html>
